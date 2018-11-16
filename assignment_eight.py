@@ -1,10 +1,11 @@
 # Yerim Dia
 # Introduction to Computer-Science
-#
+# November 16, 2018
+# This program is a game in the from of a graphical user interface
+# It is a guessing game where the user tries to find the hidden number
 
-
-import tkinter
 import random
+import tkinter
 
 root = tkinter.Tk()
 root.title("Guess the Number")
@@ -13,6 +14,10 @@ number = random.randint(1, 100)
 
 
 def answer_check():
+    """
+    This functions checks if the user guess is too low or too high and adds each guess to the total number of guesses
+    :return: none
+    """
     final_guesses = number_guesses.get() + 1
     number_guesses.set(final_guesses)
     user_guess = guess_value.get()
